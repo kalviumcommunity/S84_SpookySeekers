@@ -6,15 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-<<<<<<< HEAD
   "author": "Manya Behl",
   "license": "ISC",
   "description": "Spooky Seekers backend server",
-=======
-  "author": "",
-  "license": "ISC",
-  "description": "",
->>>>>>> f5d342caec54a7ec3d7523525d8fa96135d13a28
   "dependencies": {
     "nodemon": "^3.1.9"
   }

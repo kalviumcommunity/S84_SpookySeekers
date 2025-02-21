@@ -1,18 +1,26 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const port = 3000;
+require("dotenv").config();
+const PORT = process.env.PORT || 3000;
+const connectToDb = require("./config/db");
 
-app.get('/ping', (req, res) => {
-  res.status(200).json({ message: 'Pong' });
+app.get("/ping", (req, res) => {
+  try {
+    res.status(200).send("This is Home Route");
+  } catch (error) {
+    res.status(500).send("Internal Server Error");
+  }
 });
 
-app.use((req, res) => {
-  res.status(404).json({ error: 'Route not found' });
-});
+const db = process.env.DB_URI;
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-}).on('error', (err) => {
-  console.error('Server failed to start:', err);
-  process.exit(1);
+
+app.listen(PORT, async () => {
+  try {
+    await connectToDb(db);
+    console.log(`Server is running at http://localhost:${PORT}`);
+  } catch (error) {
+    console.error('Failed to start server:', error);
+    process.exit(1);
+  }
 });

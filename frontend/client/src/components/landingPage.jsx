@@ -54,4 +54,4 @@ const LandingPage = () => {
   );
 };
 
-export default landingPage;
+export default LandingPage;

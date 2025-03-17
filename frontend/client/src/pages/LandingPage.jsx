@@ -1,7 +1,14 @@
 import React from 'react';
-import './landingPage.css';
+import './LandingPage.css';
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+  const handleStartNowClick = () => {
+    navigate('/ghost-sighting');
+  };
+
   return (
     <div className="landing-page">
       {/* Header Section */}
@@ -39,9 +46,9 @@ const LandingPage = () => {
         {/* Call-to-Action Section */}
         <section className="cta">
           <h2>Ready to Explore?</h2>
-          <a href="https://s84-spookyseekers.onrender.com" className="cta-button">
+          <button className="cta-button" onClick={handleStartNowClick}>
             Start Now
-          </a>
+          </button>
         </section>
       </main>
 

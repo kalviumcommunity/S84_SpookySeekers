@@ -1,32 +1,57 @@
-import React from "react";
-import GhostSightingCard from "../components/GhostSightingCard";
-
-const dummySighting = {
-  location: "Abandoned Mansion, London",
-  description: "A ghostly figure was seen near the grand staircase.",
-  witness: "Sarah Connor",
-};
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const GhostSightingPage = () => {
-return (
-    <div className="bg-black min-h-screen flex flex-col items-center p-5 relative">
-        <h1 className="text-4xl font-bold text-cyan-400 mt-2 absolute top-5">👻 Spooky Sightings</h1>
-        <ol>
-            <li style={{ 
-                background: 'rgba(0, 0, 0, 0.7)',
-                padding: 20,
-                borderRadius: 10,
-                boxShadow: '0 0 10px cyan',
-                width: 280,
-                textAlign: 'center',
-                justifySelf: 'center'
-            }} className="flex flex-col items-center justify-center min-h-screen mt-16">
-                <GhostSightingCard sighting={dummySighting} />
-            </li>
-        </ol>
-    </div>
-);
-};
+  const [posts, setPosts] = useState([]);
+  const [showForm, setShowForm] = useState(false);
 
+  const apiurl = "http://localhost:3000/api/entities/ghost_sightings"
+
+  const fetchData = async(url)=>{
+
+    try{
+
+      const res = await axios.get(url)
+
+      console.log(res.data.data)
+      setPosts(res.data.data)
+
+    }
+    catch(err){
+
+      console.log(err)
+
+    }
+
+  }
+
+  useEffect(() => {
+
+    fetchData(apiurl)
+
+  }, []);
+
+  return (
+    <div>
+      <h1>Paranormal Experiences</h1>
+      <button onClick={() => setShowForm(true)}>Add Experience</button>
+
+      {Array.isArray(posts) && posts.map((ele) => (
+        <div key={ele._id}>
+          <h3>Location: {ele.location}</h3>
+          <p><strong>Description:</strong> {ele.description}</p>
+          <p>
+            <strong>Witness:</strong> {ele.Eye_witness}
+          </p>
+          {ele.images?.map((img, index) => (
+            <img key={index} src={img} alt="Ghosty evidence" />
+          ))}
+        </div>
+      ))}
+
+      {showForm && <ExperienceForm setShowForm={setShowForm} />}
+    </div>
+  );
+};
 
 export default GhostSightingPage;

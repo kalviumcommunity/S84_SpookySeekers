@@ -50,6 +50,9 @@ const GhostSightingPage = () => {
       ))}
 
       {showForm && <ExperienceForm setShowForm={setShowForm} />}
+
+      {/* Note: Add this import at the top of the file: 
+      import ExperienceForm from "../components/ExperienceForm"; */}
     </div>
   );
 };

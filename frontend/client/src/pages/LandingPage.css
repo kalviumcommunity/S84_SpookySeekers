@@ -143,6 +143,26 @@ body {
   background-color: #009acd; /* Darker blue on hover */
   transform: scale(1.1);
 }
+.entities-button {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.entities-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: rgb(91, 151, 255);
+  color: #000;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.entities-button:hover {
+  background-color: #3456ed; 
+  transform: scale(1.1);
+}
 
 /* Footer */
 .footer {

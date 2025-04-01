@@ -1,21 +1,28 @@
-import React from "react";
+const { useState } = require("react");
+import axios from "axios"
 
-const GhostSightingCard = ({ sighting }) => {
+const ExperienceForm = ({ setShowForm }) => {
+  const [formData, setFormData] = useState({
+    location: "",
+    description: "",
+    witness: "",
+    images: [],
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await axios.post("/api/posts", formData);
+    setShowForm(false);
+    window.location.reload();
+  };
+
   return (
-    <div className="bg-gray-900 text-white p-5 rounded-lg shadow-lg w-80">
-      <h2 className="text-xl font-bold text-cyan-400">{sighting.location}</h2>
-      <p className="text-gray-300">{sighting.description}</p>
-      <p className="text-sm text-gray-500">👁 Witness: {sighting.witness}</p>
-      <div className="mt-4 flex justify-between">
-        <button className="bg-cyan-500 px-3 py-1 rounded-lg text-black font-semibold hover:bg-cyan-400 transition">
-          Read More
-        </button>
-        <button className="bg-red-500 px-3 py-1 rounded-lg text-black font-semibold hover:bg-red-400 transition">
-          Report Sighting
-        </button>
-      </div>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input type="text" placeholder="Location" onChange={(e) => setFormData({ ...formData, location: e.target.value })} required />
+      <textarea placeholder="Description" onChange={(e) => setFormData({ ...formData, description: e.target.value })} required />
+      <input type="text" placeholder="Witness" onChange={(e) => setFormData({ ...formData, witness: e.target.value })} required />
+      <input type="file" multiple onChange={(e) => setFormData({ ...formData, images: [...e.target.files] })} />
+      <button type="submit">Submit</button>
+    </form>
   );
 };
-
-export default GhostSightingCard;

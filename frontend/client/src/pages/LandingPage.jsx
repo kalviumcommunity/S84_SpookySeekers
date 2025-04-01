@@ -6,7 +6,10 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleStartNowClick = () => {
-    navigate('/ghost-sighting');
+    navigate('/posts');
+  };
+  const handleEntitiesClick = () => {
+    navigate('/entities');
   };
 
   return (
@@ -48,6 +51,9 @@ const LandingPage = () => {
           <h2>Ready to Explore?</h2>
           <button className="cta-button" onClick={handleStartNowClick}>
             Start Now
+          </button>
+          <button className="entities-button" onClick={handleEntitiesClick}>
+            Entities
           </button>
         </section>
       </main>

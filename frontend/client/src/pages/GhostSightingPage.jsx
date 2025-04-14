@@ -28,7 +28,6 @@ const GhostSightingPage = () => {
       )}
 
       {showStoryForm && <StoryForm onClose={() => setShowStoryForm(false)} />}
-
       <button className="add-story-btn" onClick={() => setShowStoryForm(true)}>
         ➕ Add Your Story
       </button>

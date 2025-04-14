@@ -1,0 +1,94 @@
+/* src/pages/PostsPage.css */
+
+body {
+    background-color: #121212;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .posts-container {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    color: #fff;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .post-card {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .post-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.1);
+  }
+  
+  .post-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .post-actions button {
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .post-actions button:hover {
+    color: #fff;
+  }
+  
+  .comment-box {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+  }
+  
+  .comment-box input {
+    width: 70%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+  }
+  
+  .comment-box button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .comment-box ul {
+    margin-top: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .comment-box li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #333;
+  }
+  

@@ -1,0 +1,419 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Creepster', cursive;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .homepage {
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/13261559/hillhouse1.jpg?quality=90&strip=all&crop=0.03331112591605,0,99.933377748168,100') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 10px rgb(0, 68, 255);
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    color: #ddd;
+  }
+  
+  /* Paranormal Stories */
+  .stories {
+    background: #111;
+    padding: 50px;
+  }
+  
+  .stories-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .story-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 123, 255);
+    transition: transform 0.3s;
+  }
+  
+  .story-card:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Ghost Detector */
+  .ghost-detector {
+    background: #000;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  /* .scan-button {
+    background: rgba(18, 156, 255, 0.726);
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 20px;
+  } */
+
+  .button {
+    background: linear-gradient(45deg, #6fd1fb, #00345b);
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 20px;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.7);
+}
+  
+  .scan-button:hover {
+    background: rgba(0, 119, 255, 0.471);
+  }
+  
+  /* Haunted Locations */
+  .haunted-locations {
+    background: #111;
+    padding: 50px;
+  }
+  
+  .location-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .location-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px blue;
+  }
+  
+  /* Spooky Events */
+ 
+.event-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0, 183, 255, 0.2); /* Subtle neon glow */
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Alternate styling for even event cards */
+  .event-card:nth-child(even) {
+    flex-direction: row-reverse; /* Flip the layout */
+  }
+  
+  /* Event Image - Rounded */
+  .event-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(0, 183, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 183, 255, 0.5);
+    transition: 0.3s;
+  }
+  
+  .event-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Event Content */
+  .event-info {
+    flex: 1;
+    padding: 0 20px;
+    color: #d0eaff; /* Light ice blue */
+  }
+  
+  .event-info h3 {
+    font-size: 1.6rem;
+    color: #00b7ff; /* Neon cyan */
+    text-shadow: 0 0 12px rgba(0, 183, 255, 0.5);
+    margin-bottom: 8px;
+  }
+  
+  .event-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #bbb;
+  }
+  
+  /* Event Date Tag */
+  .event-date {
+    /* background-color: #9bd9f2; */
+    /* color: #000; */
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .event-card {
+      flex-direction: column !important; /* Force single column on mobile */
+      text-align: center;
+      padding: 25px;
+    }
+  
+    .event-image {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+  
+    .event-info {
+      padding: 0;
+    }
+  }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(10, 15, 30, 0.9); /* Deep midnight blue */
+  box-shadow: 0 4px 15px rgba(0, 183, 255, 0.3); /* Subtle neon blue glow */
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 20px;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(0, 183, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #00b7ff; /* Neon cyan */
+  text-shadow: 0 0 12px rgba(0, 183, 255, 0.8);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #d0eaff; /* Light ice blue */
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* HOVER EFFECT */
+.nav-links a:hover {
+  color: #00b7ff; /* Bright blue hover */
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00b7ff;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* GHOSTLY FADE-IN EFFECT */
+.nav-links a::after {
+  content: "✨";
+  position: absolute;
+  font-size: 1rem;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  opacity: 1;
+  top: -10px;
+}
+
+/* MOBILE MENU TOGGLE */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 15, 30, 0.95);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.spooky-events h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 4px 4px 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6);
+    padding: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    animation: flicker 2s infinite alternate;
+  }
+  
+  /* Spooky Flickering Effect */
+  @keyframes flicker {
+    0% {
+      text-shadow: 3px 3px 8px rgba(0, 255, 255, 0.9), 0 0 15px rgba(0, 255, 255, 0.6);
+    }
+    100% {
+      text-shadow: 5px 5px 15px rgba(0, 255, 255, 1), 0 0 25px rgba(0, 255, 255, 0.8);
+    }
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0b0c10;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #66fcf1;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-right: 25px;
+  }
+  
+  .nav-links a {
+    color: #c5c6c7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #66fcf1;
+  }
+  
+  .logout-btn {
+    padding: 10px 18px;
+    background-color: transparent;
+    border: 2px solid #66fcf1;
+    color: #66fcf1;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logout-btn:hover {
+    background-color: #66fcf1;
+    color: #0b0c10;
+  }
+  

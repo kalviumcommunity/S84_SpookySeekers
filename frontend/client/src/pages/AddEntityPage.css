@@ -1,0 +1,127 @@
+
+  
+  /* Wrapper for centering */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Form styling */
+  .form-box {
+    background: #1e1e1e; /* Dark card */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    width: 400px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Heading visibility fix */
+  .form-box h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  /* Label styling */
+  .form-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 6px;
+    color: #bbb;
+  }
+  
+  /* Input and Textarea */
+  .form-box input,
+  .form-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #2c2c2c;
+    color: white;
+    transition: 0.3s;
+  }
+  
+  /* Input focus effect */
+  .form-box input:focus,
+  .form-box textarea:focus {
+    border: 2px solid #007bff;
+    outline: none;
+  }
+  
+  /* Button */
+  .form-box button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .form-box button:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive */
+  @media (max-width: 450px) {
+    .form-box {
+      width: 90%;
+    }
+  }
+  
+  
+/* Responsive Design */
+
+/* Tablets & Small Screens */
+@media (max-width: 768px) {
+  .form-box {
+      width: 80%;
+      padding: 1.5rem;
+  }
+
+  .form-box h2 {
+      font-size: 22px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .form-container {
+      padding: 10px;
+  }
+
+  .form-box {
+      width: 90%;
+      padding: 1.5rem;
+  }
+
+  .form-box h2 {
+      font-size: 20px;
+  }
+
+  .form-box input,
+  .form-box textarea {
+      padding: 10px;
+  }
+
+  .form-box button {
+      padding: 10px;
+      font-size: 14px;
+  }
+}

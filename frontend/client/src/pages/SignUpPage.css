@@ -1,0 +1,94 @@
+/* SignupPage.css */
+.login-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0b0c10, #1f2833);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #c5c6c7;
+    justify-self: center;
+}
+
+.login-box {
+    background-color: #101820;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    width: 360px;
+    text-align: center;
+    border: 1px solid #45a29e;
+    justify-content: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align input boxes to the center */
+    width: 100%;
+}
+
+.login-box h2 {
+    margin-bottom: 15px;
+    color: #66fcf1;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: center; /* Center align the input fields */
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #c5c6c7;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #45a29e;
+    border-radius: 8px;
+    background-color: #1f2833;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+    justify-self: center;
+    text-align: center; /* Center the text inside the input fields */
+}
+
+.input-group input:focus {
+    border-color: #66fcf1;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #66fcf1;
+    color: #0b0c10;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #45a29e;
+}
+
+.forgot-password {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #888;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}

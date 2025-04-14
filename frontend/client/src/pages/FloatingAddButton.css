@@ -1,0 +1,18 @@
+.add-story-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .add-story-btn:hover {
+    background-color: #555;
+  }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import './EntitiesListPage.css';
 
 
 const EntitiesListPage = () => {
@@ -25,18 +26,24 @@ const apiurl = "http://localhost:3000/api/entities"
   }, []);
 
   return (
-    <div>
-      <h1>Entities</h1>
-      <button onClick={() => navigate("/add-entity")}>Add New Entity</button>
-      {Object.keys(entities).length === 0 ? (
-        <p>Loading entities...</p> ) : (
-          Object.keys(entities).map((ele)=>(
-            <div key={ele}>
-              <h2>{ele}</h2>
-            </div>
-          ))
-        )
-      }
+    <div className="entities-container">
+      <h1 className="h1">Entities</h1>
+      <button className="add-entity-btn" onClick={() => navigate("/add-entity")}>
+        Add New Entity
+      </button>
+      <div className="cards">
+        {Object.keys(entities).map((ele, index) => (
+          <div key={index} className="entity-card">
+            <h3>{ele}</h3>
+            <button className="cta-button" id="update">
+            Update
+          </button>
+            <button className="cta-button" >
+            Delete
+          </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
